@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import Header from "../header";
 
-const LayoutWrap = () => {
+const LayoutPublic = () => {
   return (
     <div className="w-full flex flex-col items-center">
       <Header />
@@ -10,6 +10,6 @@ const LayoutWrap = () => {
       </div>
     </div>
   );
-}
- 
-export default LayoutWrap;
+};
+
+export default LayoutPublic;
