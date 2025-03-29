@@ -9,7 +9,7 @@ import {
 } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
 export function RegisterForm({
   className,
@@ -44,10 +44,6 @@ export function RegisterForm({
                 <Label htmlFor="password">Password</Label>
                 <Input id="password" type="password" required />
               </div>
-              <div className="grid gap-2">
-                <Label htmlFor="confirm-password">Confirm Password</Label>
-                <Input id="confirm-password" type="password" required />
-              </div>
               <Button type="submit" className="w-full">
                 Sign Up
               </Button>
@@ -57,9 +53,9 @@ export function RegisterForm({
             </div>
             <div className="mt-4 text-center text-sm">
               Do you have an account?{" "}
-              <NavLink to="/login" className="underline underline-offset-4">
+              <Link to="/login" className="underline underline-offset-4">
                 Login
-              </NavLink>
+              </Link>
             </div>
           </form>
         </CardContent>

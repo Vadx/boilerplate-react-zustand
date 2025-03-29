@@ -1,13 +1,17 @@
 import { Outlet } from "react-router";
+import Logo from "../logo";
 
 const LayoutAuth = () => {
   return (
-    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
-        <div className="w-full max-w-sm">
+    <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-muted p-6 md:p-10">
+      <div className="flex w-full max-w-sm flex-col gap-2">
+        <span className="flex items-center self-center">
+          <Logo size="large" />
+        </span>
         <Outlet />
-        </div>
       </div>
+    </div>
   );
-}
- 
+};
+
 export default LayoutAuth;

@@ -9,7 +9,7 @@ import {
 } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
 export function LoginForm({
   className,
@@ -39,12 +39,12 @@ export function LoginForm({
               <div className="grid gap-2">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password</Label>
-                  <NavLink
+                  <Link
                     to="/forgot-password"
                     className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
                   >
                     Forgot your password?
-                  </NavLink>
+                  </Link>
                 </div>
                 <Input id="password" type="password" required />
               </div>
@@ -57,9 +57,9 @@ export function LoginForm({
             </div>
             <div className="mt-4 text-center text-sm">
               Don&apos;t have an account?{" "}
-              <NavLink to="/register" className="underline underline-offset-4">
+              <Link to="/register" className="underline underline-offset-4">
                 Sign up
-              </NavLink>
+              </Link>
             </div>
           </form>
         </CardContent>

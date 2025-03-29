@@ -9,7 +9,7 @@ import {
 } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
 export function ResetPasswordForm({
   className,
@@ -42,9 +42,9 @@ export function ResetPasswordForm({
             </div>
             <div className="mt-4 text-center text-sm">
               or{" "}
-              <NavLink to="/login" className="underline underline-offset-4">
+              <Link to="/login" className="underline underline-offset-4">
                 Back to Login
-              </NavLink>{" "}
+              </Link>{" "}
               page
             </div>
           </form>
