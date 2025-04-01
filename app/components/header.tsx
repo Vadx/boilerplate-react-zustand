@@ -10,7 +10,7 @@ const navList = [
 
 const Header = () => {
   return (
-    <header className="flex w-full items-center justify-between p-4 border-b border-gray-300 bg-white">
+    <header className="flex w-full items-center justify-between p-4 border-b border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700">
       <Logo size="medium" color="black" className="flex items-center" />
       <nav className="flex space-x-4">
         {navList.map((item) => (

@@ -32,7 +32,7 @@ const FooterNav = ({
   return (
     <>
       {title && (
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+        <h2 className="title-font font-medium tracking-widest text-sm mb-3">
           {title}
         </h2>
       )}
@@ -81,7 +81,7 @@ const SocialLinks = ({ links }: { links: FooterProps[] }) => {
 
 const Footer = () => {
   return (
-    <footer className="text-gray-600 body-font w-full flex flex-col mt-auto shadow-md">
+    <footer className="text-gray-600 body-font w-full flex flex-col mt-auto shadow-md dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700">
       <div className="container px-5 py-10 space-y-5 md:space-y-0 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="max-w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left flex-1">
           <Logo className="md:justify-start" />
@@ -98,7 +98,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-100">
+      <div className="bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-500 text-sm text-center sm:text-left">
             © 2025 Boilerplate. All rights reserved.
