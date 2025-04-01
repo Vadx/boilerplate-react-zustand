@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import Logo from "./logo";
+import { ModeToggle } from "./theme-provider/mode-toggle";
 
 const navList = [
   { name: "Home", path: "/" },
@@ -30,6 +31,7 @@ const Header = () => {
           </NavLink>
         ))}
       </nav>
+      <ModeToggle />
     </header>
   );
 };

@@ -10,6 +10,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { ThemeProvider } from "./components/theme-provider";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,12 +37,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {isNavigating && (
-          <div className="flex items-center justify-center h-screen bg-background fixed inset-0 z-50 w-full">
-            <span className="text-3xl">Loading test</span>
-          </div>
-        )}
-        {children}
+        <ThemeProvider>
+          {isNavigating && (
+            <div className="flex items-center justify-center h-screen bg-background fixed inset-0 z-50 w-full">
+              <span className="text-3xl">Loading test</span>
+            </div>
+          )}
+          {children}
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
