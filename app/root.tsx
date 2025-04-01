@@ -29,14 +29,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const navigation = useNavigation();
   const isNavigating = Boolean(navigation.location);
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider>
           {isNavigating && (
             <div className="flex items-center justify-center h-screen bg-background fixed inset-0 z-50 w-full">
