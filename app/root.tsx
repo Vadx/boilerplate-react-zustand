@@ -11,6 +11,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { ThemeProvider } from "./components/theme-provider";
+import LinearLoading from "./components/ui/liner-loading";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,12 +37,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className="relative">
         <ThemeProvider>
           {isNavigating && (
-            <div className="flex items-center justify-center h-screen bg-background fixed inset-0 z-50 w-full">
-              <span className="text-3xl">Loading test</span>
-            </div>
+            <LinearLoading className="fixed top-0 left-0 w-full z-50" />
           )}
           {children}
         </ThemeProvider>
