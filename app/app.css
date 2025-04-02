@@ -137,19 +137,18 @@ body {
 /* Custom styles */
 
 .progress-container {
-  position: relative;
-  height: 4px;
+  height: 3px;
   width: 100%;
   overflow: hidden;
-  background-color: #e6effd;
+  background-color: transparent;
 }
 
 .progress-bar-primary,
 .progress-bar-secondary {
+  @apply bg-primary rounded-md;
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #2563eb;
   transform: translateX(0) scaleX(0);
   transform-origin: left;
 }
