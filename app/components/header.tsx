@@ -6,6 +6,8 @@ const navList = [
   { name: "Home", path: "/" },
   { name: "Articles", path: "/articles" },
   { name: "Users", path: "/users" },
+  { name: "Login", path: "/login" },
+  { name: "Sign Up", path: "/register" },
 ];
 
 const Header = () => {
